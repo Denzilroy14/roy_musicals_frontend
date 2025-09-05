@@ -7,7 +7,7 @@ export default function LandingPage(props){
         <div className='landing-container'>
                 {/*header*/}
                 <header className='header-container'>
-                     <h1>Roy Musicals</h1>
+                     <h1>Roy Musical</h1>
                     <div className='logo'>
                         <img src='Roy Musicals logo.png' alt='logo'></img>
                     </div>
