@@ -1,0 +1,440 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  /*background-color: #f8f9fa;
+  color: #212529;*/
+  background-image:url('C:\Users\Win11 Pro 22H2\OneDrive\Desktop\React_tutorial\roy_musicals\frontend\public\electric_guitar.png');
+  
+}
+
+/* Hero Section */
+.hero-section {
+  /*background: linear-gradient(135deg, #2c3e50, #34495e);*/
+  color:black;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero-section p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-weight: 400;
+  font-family:cursive;
+  color: #ecf0f1;
+  /*background-image:url('C:\Users\Win11 Pro 22H2\OneDrive\Desktop\React_tutorial\roy_musicals\frontend\public\25b07c9a-1c57-4dea-a7e4-22b95d40a97e.jpeg')*/
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color:black;
+  h1{
+    font-family:Arvo,serif;
+  }
+  
+  /* Background Image Settings */
+  /*background-image:url("C:\Users\Win11 Pro 22H2\OneDrive\Desktop\React_tutorial\roy_musicals\frontend\public\electric_guitar.png"); /* Replace with actual image */
+  background-size:cover;        /* Ensures the image covers the full header */
+  background-position:center;   /* Keeps the focal point centered */
+  background-repeat: no-repeat;  /* Prevents tiling */
+  
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  color: #ffffff; /* Optional: Change text color for contrast */
+}
+.logo img {
+  width: 150px;
+  padding-left:700px;
+  padding-right:10px;       /* Medium size */
+  height: auto;       /* Maintain aspect ratio */
+  object-fit:cover;
+}
+
+/* Services Section */
+#services_offered {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.services-offered-navigation h4 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+hr {
+  width: 60px;
+  height: 4px;
+  background-color: #007bff;
+  border: none;
+  margin: 1rem auto 2rem;
+}
+
+.services {
+  display:contents;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.services img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color:black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.services h5 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Call to Action Button */
+.CTA {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+}
+
+.CTA:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .CTA {
+    width: 80%;
+  }
+}
+
+
+.services-offered-container {
+  padding: 4rem 2rem;
+  background-color:white;
+}
+
+.service-types {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Each service item */
+.service-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Left image placement */
+.service-item.left {
+  flex-direction: row;
+}
+
+/* Right image placement */
+.service-item.right {
+  flex-direction: row-reverse;
+}
+
+/* Image styling */
+.service-img {
+  width: 350px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Paragraph styling */
+.service-item p {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .service-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-item.right,
+  .service-item.left {
+    flex-direction: column;
+  }
+
+  .service-img {
+    width: 80%;
+  }
+}
+
+
+.faq {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1em;
+  font-family: sans-serif;
+  h2{
+    color:white;
+  }
+}
+
+.faq-question {
+  width: 100%;
+  background: #f0f0f0;
+  border: none;
+  text-align: left;
+  padding: 1em;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-answer {
+  padding: 1em;
+  background-color: #fff;
+  border-left: 3px solid #007BFF;
+  margin-bottom: 1em;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.arrow {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/*Appoinment style*/
+/* Appointment Section Container */
+.Appoinment-container {
+  padding: 4rem 2rem;
+  background-color: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form Wrapper - Medium Size */
+.appoinment-form {
+  background-color: #ffffff;
+  padding: 2.5rem 2rem;             /* Slightly smaller padding */
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 540px;  
+  h1{
+    color:black;
+  }              /* Medium width (was 600px) */
+}
+
+/* Form Layout */
+.appoinment-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;                      /* Slightly less gap between fields */
+}
+
+/* Input, Select & Textarea Styling - Medium size */
+.appoinment-form input,
+.appoinment-form select,
+.appoinment-form textarea {
+  padding: 0.75rem 0.9rem;          /* Reduced padding for medium size */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;               /* Slightly smaller font for input fields */
+  transition: border 0.3s ease;
+  background-color: #fdfdfd;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Focus Styling */
+.appoinment-form input:focus,
+.appoinment-form select:focus,
+.appoinment-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Label Styling */
+.appoinment-form label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;               /* Medium font size for labels */
+}
+
+/* Submit Button */
+.appoinment-form button {
+  padding: 0.8rem 1.3rem;           /* Slightly smaller padding */
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.appoinment-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .appoinment-form {
+    padding: 2rem 1.2rem;
+  }
+
+  .appoinment-form button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/*Footer section style*/
+.Footer-container {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Footer-container footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+footer div {
+    flex: 1 1 220px;
+    min-width: 220px;
+}
+
+footer h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+footer a {
+    display: block;
+    color: #c0c0c0;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+footer p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #c0c0c0;
+}
+
+.location-details iframe {
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 370px;
+    height: 250px;
+    margin-top: 10px;
+}
+
+.social_media img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
+    display:flex;
+}
+
+.social_media a {
+    display: inline-block;
+    font-size: 14px;
+    color: #c0c0c0;
+    transition: color 0.3s;
+}
+
+.social_media a:hover {
+    color: #ffffff;
+}
+.Contact-details img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
+    display:flex;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .Footer-container footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .location-details iframe {
+        width: 100%;
+    }
+}
+
