@@ -12,12 +12,11 @@ export default function Admin(){
     return(
         <div>
             <h1>User list:</h1>
-            if (users.length===0){
+            {Array.isArray(users)&&users.length===0?(
                 <p>No users found</p>
-            }
-            else{
+            ):(
                 users.map((user,index)=>(
-                    <div>
+                <div>
                     <h3>Customername:{user.customername}</h3>
                     <h3>Customerphone:{user.customerphone}</h3>
                     <h3>Customer-email:{user.customeremail}</h3>
@@ -31,7 +30,7 @@ export default function Admin(){
                     </video>
                     </div>
                 ))
-            }
+           )}
         </div>
     );
 }
