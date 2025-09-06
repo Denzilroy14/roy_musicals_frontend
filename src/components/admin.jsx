@@ -4,7 +4,7 @@ export default function Admin(){
     const [users,setUsers]=useState([]);
 
     useEffect(()=>{
-        axios.get('http://roymusicalsbackend.pythonanywhere.com/admin')
+        axios.get('https://roymusicalsbackend.pythonanywhere.com/admin')
         .then(res=>setUsers(res.data))
         .catch(err=>console.error(err));
     },[]);
