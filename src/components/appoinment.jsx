@@ -47,7 +47,7 @@ export default function Appoinment(){
             return;
         }
         try{
-            await axios.post('http://localhost:5000/appoinment',data);
+            await axios.post('https://roymusicalsbackend.pythonanywhere.com/appoinment',data);
             setForm({
                 customername:'',
                 customerphone:'',
