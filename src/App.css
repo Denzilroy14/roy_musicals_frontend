@@ -4,13 +4,12 @@ body {
   margin: 0;
   padding: 0;
   /*background-color: #f8f9fa;
-  color: #212529;*/
-  background-image:url('https://www.shutterstock.com/image-photo/bordeaux-france-04-29-2025-yamaha-2672272663');
+  /*color: #212529;
+  background-image:*/
 }
-
 /* Hero Section */
 .hero-section {
-  /*background: linear-gradient(135deg, #2c3e50, #34495e);*/
+  background: linear-gradient(135deg, #2c3e50, #34495e);
   color:black;
   padding: 4rem 2rem;
   text-align: center;
