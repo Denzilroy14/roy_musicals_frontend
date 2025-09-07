@@ -3,9 +3,9 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  /*background-color: #f8f9fa;
-  /*color: #212529;
-  background-image:*/
+  background-color: #f8f9fa;
+  color: #212529;
+  /*background-image:url('https://www.shutterstock.com/image-photo/bordeaux-france-04-29-2025-yamaha-2672272663');*/
 }
 /* Hero Section */
 .hero-section {
