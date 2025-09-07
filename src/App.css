@@ -3,9 +3,12 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  /*background-color: #f8f9fa;*/
   color: #212529;
-  background-image:url('https://www.shutterstock.com/image-photo/bordeaux-france-04-29-2025-yamaha-2672272663');
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwTJKQhwjNY7KZ6WZOq6e45BJ7d_zCKfCm4g&s');
+  background-repeat: no-repeat;         /* Prevent the image from repeating */
+  background-size: cover;               /* Scale the image to cover the entire background */
+  background-position: center center;   /* Center the image */
+  background-attachment: fixed; 
 }
 /* Hero Section */
 .hero-section {
