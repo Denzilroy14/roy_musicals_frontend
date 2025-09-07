@@ -136,8 +136,8 @@ export default function LandingPage(props){
                         </div>
                         <div className='location-details'>
                             <h3>Address:
-                                <p>ROY MUSICALS
-                                Imperial Shopping Centre, 88/5, Residency Rd, near Brigade Road, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025</p>
+                                <a href='https://maps.app.goo.gl/zC9zqw5HUGD1qe2k6'>ROY MUSICALS
+                                Imperial Shopping Centre, 88/5, Residency Rd, near Brigade Road, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025</a>
                                 </h3>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.010069462384!2d77.60326120826181!3d12.971207314838919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17d31c433243%3A0xf3fa1f9cbc9f21b8!2sROY%20MUSICALS!5e0!3m2!1sen!2sin!4v1756822629372!5m2!1sen!2sin"
                              title='location'
