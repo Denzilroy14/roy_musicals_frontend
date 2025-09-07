@@ -22,7 +22,7 @@ body {
 .hero-section p {
   max-width: 800px;
   margin: 0 auto;
-  font-size: 1.1rem;
+  font-size:medium;
   line-height: 1.8;
   font-weight: 400;
   font-family:cursive;
