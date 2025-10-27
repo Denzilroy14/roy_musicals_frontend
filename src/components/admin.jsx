@@ -24,7 +24,7 @@ export default function Admin(){
                     <h3>Brand and Model:{user.brand_model}</h3>
                     <h3>Appoinment date:{user.appoinment_date}</h3>
                     <h3>Appoinment time:{user.appoinment_time}</h3>
-                    <h3>booked on:{user.appoinment_booked_on}</h3>
+                    <h3>booked on:{user.appoinment_booked_date}</h3>
                     <h3>Video:</h3>
                     <video controls>
                         <source src={user.video_url} type='video/mp4'></source>
