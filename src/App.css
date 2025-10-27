@@ -130,8 +130,8 @@ hr {
 }
 
 .services img {
-  width:350px;              /* Make the image responsive */
-  height:auto;            /* Keep a fixed height */
+  width: 80%;              /* Make the image responsive */
+  height: 400px;            /* Keep a fixed height */
   object-fit: cover;        /* Maintain aspect ratio while filling the box */
   padding: 1rem;            /* Add padding around the image */
   border-radius: 12px;      /* Rounded corners */
@@ -143,20 +143,20 @@ hr {
   margin: 0 auto;           /* Center the image horizontally */
 }
 
-/* For responsiveness on smaller screens */
+/* For responsiveness on smaller screens 
 @media (max-width: 768px) {
   .services img {
-    width:350px;          /* Full width of the container */
-    height:auto;        /* Slightly reduce height on mobile */
-    object-fit: cover;    /* Still cover the space without distortion */
+    width:350px;          /* Full width of the container 
+    height:auto;        /* Slightly reduce height on mobile 
+    object-fit: cover;    /* Still cover the space without distortion 
   }
 }
 
 @media (max-width: 480px) {
   .services img {
-    height: 180px;        /* Even smaller height for very small screens */
+    height: 180px;        /* Even smaller height for very small screens 
   }
-}
+}*/
 
 
 .services img:hover {
