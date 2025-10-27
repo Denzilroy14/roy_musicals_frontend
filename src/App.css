@@ -1,5 +1,4 @@
 /* Global Styles */
-/* Global Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -15,6 +14,7 @@ body {
   min-height: 100vh;                   
   display: flex;
   flex-direction: column;
+  position: relative;  /* Ensure the background overlay works properly */
 }
 
 /* Prevent text selection on the background (optional) */
@@ -34,6 +34,34 @@ body::before {
   z-index: -1;  /* Position behind the content */
 }
 
+/* Main container */
+.container {
+  max-width: 1200px;          /* Limit the width on larger screens */
+  margin: 0 auto;             /* Center the container */
+  padding: 20px;              /* Add some padding */
+  flex-grow: 1;               /* Make sure the container grows to fill the space */
+  position: relative;         /* Position container relative to body */
+  z-index: 1;                 /* Ensure it's on top of the background */
+  background-color: rgba(255, 255, 255, 0.8); /* White background with slight opacity */
+  border-radius: 12px;        /* Rounded corners */
+}
+
+/* Fixed containers (for elements that need fixed positioning) */
+.fixed-container {
+  position: fixed;            /* Fix this container to the screen */
+  top: 10px;                  /* Example fixed positioning */
+  left: 50%;                  /* Center horizontally */
+  transform: translateX(-50%); /* Ensure perfect horizontal centering */
+  width: 90%;                 /* Adjust width for small screens */
+  max-width: 500px;           /* Max width for large screens */
+  background-color: rgba(255, 255, 255, 0.9); /* Solid background */
+  padding: 20px;              /* Padding for the fixed container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;        /* Rounded corners */
+  z-index: 100;               /* Ensure it's on top */
+  box-sizing: border-box;
+}
+
 /* Media Queries for Responsiveness */
 
 /* For larger screens (Desktops) */
@@ -41,29 +69,64 @@ body::before {
   body {
     background-size: cover; /* Maintain full cover for larger screens */
   }
+
+  .container {
+    max-width: 1200px;  /* Max width for desktop */
+    padding: 40px;      /* More padding on larger screens */
+  }
 }
 
-/* For tablets and smaller screens */
+/* For tablets (up to 1024px) */
 @media (max-width: 1024px) {
   body {
+    background-size: cover; /* Ensure background still covers */
     background-position: center top; /* Adjust background for smaller screens */
-    background-size: cover; /* Ensure the background still covers the screen */
+  }
+
+  .container {
+    padding: 20px;     /* Standard padding for tablets */
+    max-width: 960px;  /* Limit the container width */
+  }
+
+  .fixed-container {
+    width: 80%;        /* Adjust width for tablets */
+    padding: 15px;     /* Slightly less padding */
   }
 }
 
-/* For mobile screens */
+/* For mobile screens (up to 768px) */
 @media (max-width: 768px) {
   body {
-    background-position: center center; /* Center the background on smaller screens */
-    background-size: cover; /* Ensure it covers smaller screens properly */
+    background-size: cover;    /* Ensure background is still covering */
+    background-position: center center;  /* Center the background */
+  }
+
+  .container {
+    padding: 15px;             /* Less padding for smaller screens */
+    max-width: 100%;           /* Full width container for mobile */
+  }
+
+  .fixed-container {
+    width: 90%;                /* Full width for mobile */
+    padding: 10px;             /* Less padding */
   }
 }
 
-/* For very small screens (Mobile portrait) */
+/* For very small screens (Mobile portrait, up to 480px) */
 @media (max-width: 480px) {
   body {
-    background-position: center center; /* Keep the background centered on tiny screens */
-    background-size: cover; /* Make sure the background covers the screen */
+    background-position: center center;  /* Ensure it remains centered */
+    background-size: cover;    /* Ensure background is still covering */
+  }
+
+  .container {
+    padding: 10px;             /* Minimal padding on small screens */
+    max-width: 100%;           /* Full width container */
+  }
+
+  .fixed-container {
+    width: 90%;                /* Full width for small screens */
+    padding: 8px;              /* Reduced padding */
   }
 }
 
