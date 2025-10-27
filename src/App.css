@@ -147,7 +147,7 @@ hr {
 @media (max-width: 768px) {
   .services img {
     width: 40%;          /* Full width of the container */
-    height: 100px;        /* Slightly reduce height on mobile */
+    height: 20px;        /* Slightly reduce height on mobile */
     object-fit: cover;    /* Still cover the space without distortion */
   }
 }
