@@ -440,3 +440,95 @@ footer p {
     }
 }
 
+/*admin styles*/
+/* Basic global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  padding: 20px;
+}
+
+/* Main container */
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+/* Handling user list */
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.appointment-details {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33% - 20px);
+  max-width: calc(33% - 20px);
+  box-sizing: border-box;
+}
+
+.appointment-details h3 {
+  font-size: 1rem;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+video {
+  width: 100%;
+  border-radius: 8px;
+  max-height: 300px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+/* If there are fewer users or the screen is smaller, adjust flex properties */
+@media (max-width: 1024px) {
+  .appointment-details {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .appointment-details {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .appointment-details h3 {
+    font-size: 0.9rem;
+  }
+
+  video {
+    max-height: 200px;
+  }
+}

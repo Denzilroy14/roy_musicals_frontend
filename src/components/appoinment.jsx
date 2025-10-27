@@ -138,7 +138,7 @@ export default function Appoinment(){
                                 </div>
                                 <div>
                                     <label>
-                                        Upload a video of your product:
+                                        Upload a video of the problem your instrument is facing:
                                     </label>
                                     <input type='file' 
                                     name='video'
