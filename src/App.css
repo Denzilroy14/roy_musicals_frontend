@@ -1,15 +1,72 @@
 /* Global Styles */
+/* Global Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   color: #212529;
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwTJKQhwjNY7KZ6WZOq6e45BJ7d_zCKfCm4g&s');
-  background-repeat: no-repeat;         /* Prevent the image from repeating */
-  background-size: cover;               /* Scale the image to cover the entire background */
-  background-position: center center;   /* Center the image */
-  background-attachment: fixed; 
+  background-repeat: no-repeat;        /* Prevent the image from repeating */
+  background-size: cover;              /* Scale the image to cover the entire screen */
+  background-position: center center;  /* Center the image */
+  background-attachment: fixed;        /* Fix the background on scroll */
+  
+  /* Ensuring the body takes the full height of the screen */
+  min-height: 100vh;                   
+  display: flex;
+  flex-direction: column;
 }
+
+/* Prevent text selection on the background (optional) */
+body::-webkit-select-caret {
+  display: none;
+}
+
+/* Add a subtle gradient overlay to improve text readability */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);  /* Add a semi-transparent overlay */
+  z-index: -1;  /* Position behind the content */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For larger screens (Desktops) */
+@media (min-width: 1200px) {
+  body {
+    background-size: cover; /* Maintain full cover for larger screens */
+  }
+}
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+  body {
+    background-position: center top; /* Adjust background for smaller screens */
+    background-size: cover; /* Ensure the background still covers the screen */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  body {
+    background-position: center center; /* Center the background on smaller screens */
+    background-size: cover; /* Ensure it covers smaller screens properly */
+  }
+}
+
+/* For very small screens (Mobile portrait) */
+@media (max-width: 480px) {
+  body {
+    background-position: center center; /* Keep the background centered on tiny screens */
+    background-size: cover; /* Make sure the background covers the screen */
+  }
+}
+
 /* Hero Section */
 .hero-section {
   /*background: linear-gradient(135deg, #2c3e50, #34495e);
@@ -86,15 +143,34 @@ hr {
 }
 
 .services img {
-  width: 300px;
-  height: 300px;
-  object-fit: contain;
-  padding: 1rem;
-  border-radius: 12px;
-  background-color:black;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 50%;              /* Make the image responsive */
+  height: 300px;            /* Keep a fixed height */
+  object-fit: cover;        /* Maintain aspect ratio while filling the box */
+  padding: 1rem;            /* Add padding around the image */
+  border-radius: 12px;      /* Rounded corners */
+  background-color: black;  /* Black background if image fails to load */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  max-width: 80%;          /* Ensure the width doesn't exceed the parent container */
+  display: block;           /* Make sure it's treated as a block element */
+  margin: 0 auto;           /* Center the image horizontally */
 }
+
+/* For responsiveness on smaller screens */
+@media (max-width: 768px) {
+  .services img {
+    width: 10%;          /* Full width of the container */
+    height: 100px;        /* Slightly reduce height on mobile */
+    object-fit: cover;    /* Still cover the space without distortion */
+  }
+}
+
+@media (max-width: 480px) {
+  .services img {
+    height: 180px;        /* Even smaller height for very small screens */
+  }
+}
+
 
 .services img:hover {
   transform: scale(1.1);
