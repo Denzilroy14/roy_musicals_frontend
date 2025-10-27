@@ -130,7 +130,7 @@ hr {
 }
 
 .services img {
-  width: 50%;              /* Make the image responsive */
+  width: 80%;              /* Make the image responsive */
   height: 400px;            /* Keep a fixed height */
   object-fit: cover;        /* Maintain aspect ratio while filling the box */
   padding: 1rem;            /* Add padding around the image */
